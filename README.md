@@ -75,3 +75,4 @@ files inside the ".vim" directory.
 * vim-ruby/vim-ruby
 * vim-scripts/YankRing.vim
 * wincent/Command-T
+* zhaocai/GoldenView.Vim

@@ -35,6 +35,7 @@ NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'vim-scripts/YankRing.vim'
 NeoBundle 'wincent/Command-T'
+NeoBundle 'zhaocai/GoldenView.Vim'
 
 NeoBundleCheck
 
@@ -99,10 +100,6 @@ set smartcase                     " unless they contain at least one capital let
 "" Windows
 set splitright                    " create new horizontal split on the right
 set splitbelow                    " create new vertical split below the current window
-set winheight=8                   " set winheight to low number...
-set winminheight=8                " or this will fail
-set winheight=999
-set winwidth=84
 
 "" Backup and status line
 set backupdir=~/.vim/_backup    " where to put backup files.
@@ -289,7 +286,8 @@ let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 let g:UltiSnipsEditSplit = "vertical"
-let g:airline_theme='badwolf'
-let g:airline_powerline_fonts=1
-let g:rspec_command="!t {spec}"
+let g:airline_theme = 'badwolf'
+let g:airline_powerline_fonts = 1
+let g:rspec_command = "!t {spec}"
+let g:goldenview__enable_default_mapping = 0
 " }}}
