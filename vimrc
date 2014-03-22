@@ -237,9 +237,12 @@ noremap <Leader>crh :%s/:\(\w\+\)\s*=>/\1:/ge<CR><C-o>
 " convert should -> expect rspec syntax
 nnoremap <Leader>cse :%s/\v(\S+)\.should/expect\1.to/ge<CR><C-o>
 
-" easy visual search and replace
-vnoremap <Leader>s y<Esc>:Ack <C-r>"<CR>
-vnoremap <Leader>r y<Esc>:Ack <C-r>"<CR>:QuickFixDo :%s/<C-R>"//gc<Left><Left><Left>
+" easy global search and replace
+nnoremap <C-S> :Ack! <C-R><C-W><CR>
+nnoremap <C-A> :Ack! <C-R><C-W><CR>:QuickFixDo :%s/<C-R><C-W>//gc<Left><Left><Left>
+
+vnoremap <C-S> y<Esc>:Ack! '<C-R>"'<CR>
+vnoremap <C-A> y<Esc>:Ack! '<C-R>"'<CR>:QuickFixDo :%s/<C-R>"//gc<Left><Left><Left>
 
 " easier navigation between split windows
 nnoremap <C-J> <C-W>j
@@ -289,4 +292,5 @@ let g:airline_theme = 'badwolf'
 let g:airline_powerline_fonts = 1
 let g:rspec_command = "!t {spec}"
 let g:goldenview__enable_default_mapping = 0
+let g:ackprg = 'ag --nogroup --nocolor --column'
 " }}}
