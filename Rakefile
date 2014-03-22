@@ -60,16 +60,14 @@ def color msg, code
 end
 
 # Read which ruby version is vim compiled against
-def read_ruby_version vim
+def read_ruby_version(vim)
   script = %{require "rbconfig"; print File.join(RbConfig::CONFIG["bindir"], RbConfig::CONFIG["ruby_install_name"])}
   version = `#{vim} --nofork --cmd 'ruby #{script}' --cmd 'q' 2>&1 >/dev/null | grep -v 'Vim: Warning'`.strip
   version unless version.empty? or version.include?("command is not available")
 end
 
 # Cross-platform way of finding an executable in the $PATH.
-#
-#   which('ruby') #=> /usr/bin/ruby
-def which cmd
+def which(cmd)
   exts = ENV['PATHEXT'] ? ENV['PATHEXT'].split(';') : ['']
   ENV['PATH'].split(File::PATH_SEPARATOR).each do |path|
     exts.each { |ext|
