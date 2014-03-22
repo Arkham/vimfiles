@@ -1,5 +1,5 @@
+"" Setup NeoBundle
 if has('vim_starting')
-  set nocompatible
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
@@ -11,8 +11,6 @@ NeoBundle 'Arkham/vim-tango'
 NeoBundle 'Arkham/vim-vividchalk'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'chriseppstein/vim-haml'
-NeoBundle 'digitaltoad/vim-jade'
-NeoBundle 'ecomba/vim-ruby-refactoring'
 NeoBundle 'ervandew/supertab'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'hynek/vim-python-pep8-indent'
@@ -30,15 +28,12 @@ NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-eunuch'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-markdown'
-NeoBundle 'tpope/vim-pathogen'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'vim-scripts/SyntaxRange'
 NeoBundle 'vim-scripts/YankRing.vim'
-NeoBundle 'wavded/vim-stylus'
 NeoBundle 'wincent/Command-T'
 
 NeoBundleCheck
