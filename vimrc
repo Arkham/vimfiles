@@ -181,7 +181,6 @@ endif
 
 " Mappings {{{
 let mapleader=','
-let localleader='\'
 
 " open vimrc and reload it
 nnoremap <Leader>vv :vsplit $MYVIMRC<CR>
