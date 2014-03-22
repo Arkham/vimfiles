@@ -1,4 +1,4 @@
-"" Setup NeoBundle
+" NeoBundle {{{
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
@@ -38,8 +38,9 @@ NeoBundle 'wincent/Command-T'
 NeoBundle 'zhaocai/GoldenView.Vim'
 
 NeoBundleCheck
+" }}}
 
-"" Sane defaults
+" General settings {{{
 set encoding=utf-8
 let &t_Co=256                     " moar colors
 set clipboard=unnamed             " use system clipboard
@@ -51,7 +52,7 @@ set pastetoggle=<F12>             " for pasting code into Vim
 set timeout tm=1000 ttm=100       " fix slight delay after pressing ESC then O
 set autoread                      " auto load files if vim detects change
 
-"" Style
+" Style
 set background=dark
 color vividchalk
 set number                        " line numbers are cool
@@ -63,11 +64,11 @@ set novisualbell                  " no flashes please
 set scrolloff=3                   " provide some context when editing
 set hidden                        " Allow backgrounding buffers without writing them, and
                                   " remember marks/undo for backgrounded buffers
-"" Mouse
+" Mouse
 set mousehide                     " hide mouse when writing
 set mouse=a                       " we love the mouse
 
-"" Whitespace
+" Whitespace
 set nowrap                        " don't wrap lines
 set tabstop=2                     " a tab is two spaces
 set shiftwidth=2                  " an autoindent (with <<) is two spaces
@@ -77,13 +78,13 @@ set list                          " show invisible characters
 set backspace=indent,eol,start    " backspace through everything in insert mode
 set autoindent                    " keep indentation level when no indent is found
 
-"" Wild life
+" Wild life
 set wildmenu                      " wildmenu gives autocompletion to vim
 set wildmode=list:longest,full    " autocompletion shouldn't jump to the first match
 set wildignore+=*.scssc,*.sassc,*.csv,*.pyc,*.xls
 set wildignore+=tmp/**,node_modules/**
 
-"" List chars
+" List chars
 set listchars=""                  " reset the listchars
 set listchars=tab:▸\ ,eol:¬       " a tab should display as "▸ ", end of lines as "¬"
 set listchars+=trail:.            " show trailing spaces as dots
@@ -91,17 +92,17 @@ set listchars+=extends:>          " the character to show in the last column whe
                                   " off and the line continues beyond the right of the screen
 set listchars+=precedes:<         " the character to show in the first column when wrap is
                                   " off and the line continues beyond the left of the screen
-"" Searching
+" Searching
 set hlsearch                      " highlight matches
 set incsearch                     " incremental searching
 set ignorecase                    " searches are case insensitive...
 set smartcase                     " unless they contain at least one capital letter
 
-"" Windows
+" Windows
 set splitright                    " create new horizontal split on the right
 set splitbelow                    " create new vertical split below the current window
 
-"" Backup and status line
+" Backup and status line
 set backupdir=~/.vim/_backup    " where to put backup files.
 set directory=~/.vim/_temp      " where to put swap files.
 set laststatus=2
@@ -256,7 +257,7 @@ nnoremap <Right> :echo "no!"<CR>
 nnoremap <Up>    :echo "no!"<CR>
 nnoremap <Down>  :echo "no!"<CR>
 
-"" Fugitive
+" Fugitive
 nnoremap <Leader>gs  :Gstatus<CR>
 nnoremap <Leader>gd  :Gdiff<CR>
 nnoremap <Leader>gci :Gcommit<CR>
@@ -264,7 +265,7 @@ nnoremap <Leader>gw  :Gwrite<CR>
 nnoremap <Leader>gr  :Gread<CR>
 nnoremap <Leader>gb  :Gblame<CR>
 
-"" Plugins mapping
+" Plugins mapping
 nnoremap <Leader>f :CommandT<CR>
 nnoremap <Leader>F :CommandTFlush<CR>\|:CommandT<CR>
 nnoremap <silent> <S-left> <Esc>:bp<CR>
