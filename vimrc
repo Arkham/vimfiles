@@ -150,7 +150,7 @@ if has("autocmd")
   " fold automatically with triple {
   augroup filetype_vim
     au!
-    au FileType vim,javascript,python,c setlocal foldmethod=marker
+    au FileType vim,javascript,python,c setlocal foldmethod=marker nofoldenable
   augroup END
 
   " enable <CR> in command line window and quickfix
