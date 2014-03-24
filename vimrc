@@ -50,7 +50,7 @@ syntax enable                     " enable syntax highlighting...
 filetype plugin indent on         " depending on filetypes...
 runtime macros/matchit.vim        " with advanced matching capabilities
 set pastetoggle=<F12>             " for pasting code into Vim
-set timeout tm=1000 ttm=100       " fix slight delay after pressing ESC then O
+set timeout tm=1000 ttm=100       " fix slight delay after pressing Esc then O
 set autoread                      " auto load files if vim detects change
 
 " Style
@@ -209,7 +209,7 @@ nnoremap <Leader>vsp :execute "vsplit " . bufname("#")<CR>
 nnoremap <Leader>sp :execute "split " . bufname("#")<CR>
 
 " find merge conflict markers
-nnoremap <silent> <Leader>cf <ESC>/\v^[<=>]{7}( .*\|$)<CR>
+nnoremap <silent> <Leader>cf <Esc>/\v^[<=>]{7}( .*\|$)<CR>
 
 " show colorcolumn
 nnoremap <silent> <Leader>sc :set colorcolumn=80<CR>
@@ -288,13 +288,13 @@ nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>u :GundoToggle<CR>
 nnoremap <leader>t :wa<CR>\|:call RunCurrentSpecFile()<CR>
 nnoremap <leader>T :wa<CR>\|:call RunNearestSpec()<CR>
-" }}}
+" }}
 
 " Plugins configuration {{{
 let g:CommandTMaxHeight = 20
-let g:CommandTCancelMap = ['<ESC>', '<C-C>']
-let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
-let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
+let g:CommandTCancelMap = ['<Esc>', '<C-C>']
+let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<Esc>OB']
+let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<Esc>OA']
 let g:NERDTreeMouseMode = 3
 let g:NERDTreeHighlightCursorline = 0
 let g:gundo_right = 1
