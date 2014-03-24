@@ -231,10 +231,25 @@ nnoremap <Leader>kcm :KillControlM<CR>
 nnoremap <Leader>cc :w\|:!gcc % -Wall && ./a.out<CR>
 
 " convert ruby 1.8 -> 1.9 hash syntax
-noremap <Leader>crh :%s/:\(\w\+\)\s*=>/\1:/ge<CR><C-o>
+noremap <Leader>crh :%s/:\(\w\+\)\s*=>/\1:/ge<CR><C-O>
 
 " convert should -> expect rspec syntax
-nnoremap <Leader>cse :%s/\v(\S+)\.should/expect\1.to/ge<CR><C-o>
+function! ConvertShouldToExpect()
+  let rspec_conversions = {
+        \ 'should': 'to',
+        \ 'should_not': 'not_to',
+        \ 'should_receive': 'to receive',
+        \ 'should_not_receive': 'not_to receive',
+        \ }
+
+  for [old, new] in items(rspec_conversions)
+    execute "normal! " . ':%s/\v^(\s+)(.+)\.' . old . '>/\1expect(\2).' . new . '/ge' . "\<CR>"
+  endfor
+endfunction
+nnoremap <Leader>cse :call ConvertShouldToExpect()<CR>
+
+" convert assignment -> let rspec syntax
+nnoremap <Leader>cal :s/\v(\S+)\s*\=\s*(.+)/let(:\1){ \2 }/e<CR><C-O>
 
 " easy global search and replace
 nnoremap <C-S> :Ack! <C-R><C-W><CR>
