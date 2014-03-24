@@ -94,7 +94,8 @@ set listchars+=extends:>          " the character to show in the last column whe
 set listchars+=precedes:<         " the character to show in the first column when wrap is
                                   " off and the line continues beyond the left of the screen
 " Searching
-set hlsearch                      " highlight matches
+set hlsearch                      " highlight matches...
+nohlsearch                        " but don't highlight last search when reloading
 set incsearch                     " incremental searching
 set ignorecase                    " searches are case insensitive...
 set smartcase                     " unless they contain at least one capital letter
