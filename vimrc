@@ -210,9 +210,6 @@ nnoremap <Leader>sp :execute "split " . bufname("#")<CR>
 " find merge conflict markers
 nnoremap <silent> <Leader>cf <ESC>/\v^[<=>]{7}( .*\|$)<CR>
 
-" toggle list mode
-nnoremap <silent> <Leader>sl :set nolist!<CR>
-
 " show colorcolumn
 nnoremap <silent> <Leader>sc :set colorcolumn=80<CR>
 
