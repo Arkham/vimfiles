@@ -292,6 +292,7 @@ nnoremap <leader>T :wa<CR>\|:call RunNearestSpec()<CR>
 " }}
 
 " Plugins configuration {{{
+let g:ruby_indent_access_modifier_style = 'outdent'
 let g:CommandTMaxHeight = 20
 let g:CommandTCancelMap = ['<Esc>', '<C-C>']
 let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<Esc>OB']
