@@ -253,11 +253,11 @@ nnoremap <Leader>cse :call ConvertShouldToExpect()<CR>
 nnoremap <Leader>cal :s/\v(\S+)\s*\=\s*(.+)/let(:\1){ \2 }/e<CR><C-O>
 
 " easy global search and replace
-nnoremap <C-S> :Ack! <C-R><C-W><CR>
-nnoremap <C-A> :Ack! <C-R><C-W><CR>:QuickFixDo :%s/<C-R><C-W>//gc<Left><Left><Left>
+nnoremap <C-S> :Ack <C-R><C-W><CR>
+nnoremap <C-A> :Ack <C-R><C-W><CR>:QuickFixDo :%s/<C-R><C-W>//gc<Left><Left><Left>
 
-vnoremap <C-S> y<Esc>:Ack! '<C-R>"'<CR>
-vnoremap <C-A> y<Esc>:Ack! '<C-R>"'<CR>:QuickFixDo :%s/<C-R>"//gc<Left><Left><Left>
+vnoremap <C-S> y<Esc>:Ack '<C-R>"'<CR>
+vnoremap <C-A> y<Esc>:Ack '<C-R>"'<CR>:QuickFixDo :%s/<C-R>"//gc<Left><Left><Left>
 
 " easier navigation between split windows
 nnoremap <C-J> <C-W>j
@@ -308,5 +308,7 @@ let g:airline_theme = 'badwolf'
 let g:airline_powerline_fonts = 1
 let g:rspec_command = "!t {spec}"
 let g:goldenview__enable_default_mapping = 0
+let g:ackpreview = 1
+let g:ackhighlight = 1
 let g:ackprg = 'ag --nogroup --nocolor --column'
 " }}}
