@@ -251,7 +251,7 @@ endfunction
 nnoremap <Leader>cse :call ConvertShouldToExpect()<CR>
 
 " convert assignment -> let rspec syntax
-nnoremap <Leader>cal :s/\v(\S+)\s*\=\s*(.+)/let(:\1){ \2 }/e<CR><C-O>
+nnoremap <Leader>cal :s/\v(\S+)\s*\=\s*(.+)/let(:\1) { \2 }/e<CR><C-O>
 
 " easy global search and replace
 nnoremap <C-S> :Ack <C-R><C-W><CR>
