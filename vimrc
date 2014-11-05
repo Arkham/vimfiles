@@ -254,12 +254,9 @@ nnoremap <Leader>cse :call ConvertShouldToExpect()<CR>
 " convert assignment -> let rspec syntax
 nnoremap <Leader>cal :s/\v(\S+)\s*\=\s*(.+)/let(:\1) { \2 }/e<CR><C-O>
 
-" easy global search and replace
+" easy global search
 nnoremap <C-S> :Ack <C-R><C-W><CR>
-nnoremap <C-A> :Ack <C-R><C-W><CR>:QuickFixDo :%s/<C-R><C-W>//gc<Left><Left><Left>
-
 vnoremap <C-S> y<Esc>:Ack '<C-R>"'<CR>
-vnoremap <C-A> y<Esc>:Ack '<C-R>"'<CR>:QuickFixDo :%s/<C-R>"//gc<Left><Left><Left>
 
 " easier navigation between split windows
 nnoremap <C-J> <C-W>j
