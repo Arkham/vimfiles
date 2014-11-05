@@ -281,6 +281,7 @@ nnoremap <Leader>gb  :Gblame<CR>
 " Plugins mapping
 nnoremap <Leader>f :CommandT<CR>
 nnoremap <Leader>F :CommandTFlush<CR>\|:CommandT<CR>
+nnoremap <Leader>. :CommandTTag<CR>
 nnoremap <silent> <S-left> <Esc>:bp<CR>
 nnoremap <silent> <S-right> <Esc>:bn<CR>
 nnoremap <Leader>a <Esc>:Ack<space>
