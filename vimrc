@@ -37,7 +37,6 @@ NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'vim-scripts/YankRing.vim'
 NeoBundle 'wincent/Command-T'
 NeoBundle 'zhaocai/GoldenView.Vim'
-NeoBundle 'heartsentwined/vim-emblem'
 NeoBundle 'mustache/vim-mustache-handlebars'
 
 NeoBundleCheck
