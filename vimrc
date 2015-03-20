@@ -46,7 +46,7 @@ call neobundle#end()
 
 " General settings {{{
 set encoding=utf-8
-let &t_Co=256                     " moar colors
+set t_Co=256                      " moar colors
 set clipboard=unnamed             " use system clipboard
 set nocompatible                  " nocompatible is good for humans
 syntax enable                     " enable syntax highlighting...
