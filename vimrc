@@ -38,6 +38,7 @@ NeoBundle 'vim-scripts/YankRing.vim'
 NeoBundle 'wincent/Command-T'
 NeoBundle 'zhaocai/GoldenView.Vim'
 NeoBundle 'mustache/vim-mustache-handlebars'
+NeoBundle 'morhetz/gruvbox'
 
 NeoBundleCheck
 call neobundle#end()
@@ -57,7 +58,7 @@ set autoread                      " auto load files if vim detects change
 
 " Style
 set background=dark
-color vividchalk
+color gruvbox
 set number                        " line numbers are cool
 set relativenumber                " relative numbers are cooler
 set ruler                         " show the cursor position all the time
