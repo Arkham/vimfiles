@@ -55,6 +55,8 @@ runtime macros/matchit.vim        " with advanced matching capabilities
 set pastetoggle=<F12>             " for pasting code into Vim
 set timeout tm=1000 ttm=100       " fix slight delay after pressing Esc then O
 set autoread                      " auto load files if vim detects change
+set nobackup                      " disable backup files...
+set noswapfile                    " and swap files
 
 " Style
 set background=dark
