@@ -98,6 +98,8 @@ set listchars+=extends:>          " the character to show in the last column whe
                                   " off and the line continues beyond the right of the screen
 set listchars+=precedes:<         " the character to show in the first column when wrap is
                                   " off and the line continues beyond the left of the screen
+set fillchars+=vert:\             " set vertical divider to empty space
+
 " Searching
 set hlsearch                      " highlight matches...
 nohlsearch                        " but don't highlight last search when reloading
