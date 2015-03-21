@@ -313,7 +313,6 @@ let g:airline_theme = 'badwolf'
 let g:airline_powerline_fonts = 1
 let g:rspec_command = "!t {spec}"
 let g:goldenview__enable_default_mapping = 0
-let g:ackpreview = 1
 let g:ackhighlight = 1
 let g:ackprg = 'ag --nogroup --nocolor --column'
 " }}}
