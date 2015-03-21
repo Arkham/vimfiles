@@ -6,8 +6,10 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+NeoBundle 'SirVer/ultisnips'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'chriseppstein/vim-haml'
+NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'ervandew/supertab'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'henrik/vim-qargs'
@@ -22,6 +24,7 @@ NeoBundle 'sjl/gundo.vim'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'thinca/vim-visualstar'
 NeoBundle 'thoughtbot/vim-rspec'
+NeoBundle 'tommcdo/vim-exchange'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-endwise'
