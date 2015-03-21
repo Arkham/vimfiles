@@ -6,17 +6,16 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-NeoBundle 'Arkham/vim-quickfixdo'
-NeoBundle 'Arkham/vim-tango'
-NeoBundle 'Arkham/vim-vividchalk'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'chriseppstein/vim-haml'
 NeoBundle 'ervandew/supertab'
 NeoBundle 'godlygeek/tabular'
+NeoBundle 'henrik/vim-qargs'
 NeoBundle 'hynek/vim-python-pep8-indent'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'mileszs/ack.vim'
-NeoBundle 'ngmy/vim-rubocop'
+NeoBundle 'morhetz/gruvbox'
+NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'sjl/gundo.vim'
@@ -37,8 +36,6 @@ NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'vim-scripts/YankRing.vim'
 NeoBundle 'wincent/Command-T'
 NeoBundle 'zhaocai/GoldenView.Vim'
-NeoBundle 'mustache/vim-mustache-handlebars'
-NeoBundle 'morhetz/gruvbox'
 
 NeoBundleCheck
 call neobundle#end()
