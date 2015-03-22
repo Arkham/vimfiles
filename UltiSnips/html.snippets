@@ -1,0 +1,57 @@
+snippet html "XHTML template" b
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>${1:`!p snip.rv = snip.basename or "Page Title"`}</title>
+		$2
+	</head>
+	<body>
+		$0
+	</body>
+</html>
+endsnippet
+
+snippet scriptsrc "XHTML <script src...>" w
+<script src="$1" type="text/javascript" charset="${3:utf-8}"></script>
+endsnippet
+
+snippet script "XHTML <script>" w
+<script type="text/javascript" charset="utf-8">
+	$0
+</script>
+endsnippet
+
+snippet h1 "XHTML <h1>" w
+<h1>$0</h1>
+endsnippet
+
+snippet h2 "XHTML <h2>" w
+<h2>$0</h2>
+endsnippet
+
+snippet h3 "XHTML <h3>" w
+<h3>$0</h3>
+endsnippet
+
+snippet h4 "XHTML <h4>" w
+<h4>$0</h4>
+endsnippet
+
+snippet div "<div>" w
+<div>
+	$0
+</div>
+endsnippet
+
+snippet div. "<div> with class" w
+<div`!p snip.rv=' class="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""`>
+	$0
+</div>
+endsnippet
+
+snippet div# "<div> with ID & class" w
+<div`!p snip.rv=' id="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""``!p snip.rv=' class="' if t[2] else ""`${2:name}`!p snip.rv = '"' if t[2] else ""`>
+	$0
+</div>
+endsnippet
