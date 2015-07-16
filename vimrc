@@ -215,7 +215,7 @@ nmap <Leader>e :e %%
 
 " easy way to switch between latest files
 nnoremap <Leader><Leader> <C-^>
-nnoremap <Leader>vsp :execute "vsplit " . bufname("#")<CR>
+nnoremap <Leader>vs :execute "vsplit " . bufname("#")<CR>
 nnoremap <Leader>sp :execute "split " . bufname("#")<CR>
 
 " find merge conflict markers
