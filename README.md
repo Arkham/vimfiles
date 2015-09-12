@@ -15,8 +15,7 @@ Prerequisites: ruby, git.
 3. Go into ".vim" and run "rake":
    `cd ~/.vim && rake`
 
-This will install "~/.vimrc" and "~/.gvimrc" symlinks that point to
-files inside the ".vim" directory.
+This will install a "~/.vimrc" symlink to the config inside the ".vim" directory.
 
 ## Features:
 
