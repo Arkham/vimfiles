@@ -16,9 +16,9 @@ desc %(Make ~/.vimrc symlink)
 task :link do
   dotfile = File.join(ENV['HOME'], ".vimrc")
   if File.exist? dotfile
-    warn "~/.#{script} already exists"
+    warn "#{dotfile} already exists"
   else
-    ln_s File.join('.vim', script), dotfile
+    ln_s File.join('.vim', 'vimrc'), dotfile
   end
 end
 
