@@ -1,44 +1,40 @@
-" NeoBundle {{{
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
+" Plugins {{{
+call plug#begin('~/.vim/plugged')
 
-call neobundle#begin(expand('~/.vim/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim'
+Plug 'SirVer/ultisnips'
+Plug 'chriseppstein/vim-haml'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'elixir-lang/vim-elixir'
+Plug 'elmcast/elm-vim'
+Plug 'ervandew/supertab'
+Plug 'godlygeek/tabular'
+Plug 'hynek/vim-python-pep8-indent'
+Plug 'mileszs/ack.vim'
+Plug 'morhetz/gruvbox'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'pangloss/vim-javascript'
+Plug 'scrooloose/nerdtree'
+Plug 'sjl/gundo.vim'
+Plug 'thinca/vim-visualstar'
+Plug 'thoughtbot/vim-rspec'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-ruby/vim-ruby'
+Plug 'vim-scripts/YankRing.vim'
+Plug 'wincent/Command-T'
+Plug 'zhaocai/GoldenView.Vim'
 
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'chriseppstein/vim-haml'
-NeoBundle 'christoomey/vim-tmux-navigator'
-NeoBundle 'elixir-lang/vim-elixir'
-NeoBundle 'ervandew/supertab'
-NeoBundle 'godlygeek/tabular'
-NeoBundle 'hynek/vim-python-pep8-indent'
-NeoBundle 'mileszs/ack.vim'
-NeoBundle 'morhetz/gruvbox'
-NeoBundle 'mustache/vim-mustache-handlebars'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'sjl/gundo.vim'
-NeoBundle 'thinca/vim-visualstar'
-NeoBundle 'thoughtbot/vim-rspec'
-NeoBundle 'tpope/vim-abolish'
-NeoBundle 'tpope/vim-commentary'
-NeoBundle 'tpope/vim-endwise'
-NeoBundle 'tpope/vim-eunuch'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-markdown'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'tpope/vim-repeat'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-unimpaired'
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'vim-scripts/YankRing.vim'
-NeoBundle 'wincent/Command-T'
-NeoBundle 'zhaocai/GoldenView.Vim'
-
-NeoBundleCheck
-call neobundle#end()
+call plug#end()
 " }}}
 
 " General settings {{{
