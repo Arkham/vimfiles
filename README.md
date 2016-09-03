@@ -1,7 +1,7 @@
 Arkham's vim configuration
 ==========================
 
-My configuration uses [NeoBundle](https://github.com/Shougo/neobundle.vim).
+My configuration uses [vim-plug](https://github.com/junegunn/vim-plug).
 (But you don't need to care about any of that.)
 
 ## Installation:
@@ -20,7 +20,7 @@ This will install a "~/.vimrc" symlink to the config inside the ".vim" directory
 ## Features:
 
 * For vim:
-  - use NeoBundle as plugin environment
+  - use vim-plug as plugin environment
   - sane defaults: nocompatible mode, utf8, advanced syntax highlighting
   - 2 spaces, no tabs, uses bash-alike autocompletion for files and directories
   - tabs are displayed as `▸ `, end of lines as `¬`, trailing spaces as `.`

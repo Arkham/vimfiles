@@ -1,9 +1,9 @@
-task :default => [:neobundle, :tmp_dirs, :link, :vim, :command_t]
+task :default => [:plug, :tmp_dirs, :link, :vim, :command_t]
 
-desc %(Setup neobundle)
-task :neobundle do
-  mkdir_p "bundle"
-  sh "git clone https://github.com/Shougo/neobundle.vim bundle/neobundle.vim"
+desc %(Setup plug)
+task :plug do
+  mkdir_p "plugged"
+  sh "curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
 end
 
 desc %(Create temporary folders)
@@ -29,7 +29,7 @@ end
 
 desc %(Compile Command-T plugin)
 task :command_t => :macvim_check do
-  Dir.chdir "bundle/Command-T/ruby/command-t" do
+  Dir.chdir "plugged/Command-T/ruby/command-t" do
     sh "rake make"
   end
 end

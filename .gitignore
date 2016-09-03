@@ -1,3 +1,4 @@
 plugged
 _temp
 _backup
+autoload/plug.vim
