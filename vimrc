@@ -297,29 +297,30 @@ nnoremap <leader>T :wa<CR>\|:TestNearest<CR>
 " }}
 
 " Plugins configuration {{{
-let g:ruby_indent_access_modifier_style = 'normal'
-let g:CommandTMaxHeight = 20
 let g:CommandTCancelMap = ['<Esc>', '<C-C>']
+let g:CommandTFileScanner = 'git'
+let g:CommandTMaxHeight = 20
 let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<Esc>OB']
 let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<Esc>OA']
-let g:CommandTFileScanner = 'git'
 let g:CommandTTraverseSCM = 'pwd'
-let g:NERDTreeMouseMode = 3
 let g:NERDTreeHighlightCursorline = 0
+let g:NERDTreeMouseMode = 3
+let g:UltiSnipsEditSplit = "vertical"
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsJumpBackwardTrigger="<C-k>"
+let g:UltiSnipsJumpForwardTrigger="<C-j>"
+let g:ackhighlight = 1
+let g:ackprg = 'ag --nogroup --nocolor --column'
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'badwolf'
+let g:elixir_use_markdown_for_docs = 1
+let g:goldenview__enable_default_mapping = 0
 let g:gundo_right = 1
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
-let g:UltiSnipsEditSplit = "vertical"
-let g:UltiSnipsExpandTrigger="<Tab>"
-let g:UltiSnipsJumpForwardTrigger="<C-j>"
-let g:UltiSnipsJumpBackwardTrigger="<C-k>"
-let g:airline_theme = 'badwolf'
-let g:airline_powerline_fonts = 1
-let g:goldenview__enable_default_mapping = 0
-let g:ackhighlight = 1
-let g:ackprg = 'ag --nogroup --nocolor --column'
-let g:test#strategy = "vimux"
+let g:ruby_indent_access_modifier_style = 'normal'
 let g:test#preserve_screen = 1
-let g:elixir_use_markdown_for_docs = 1
+let g:test#strategy = "vimux"
+let g:yankring_history_dir = '$HOME/.vim'
 " }}}

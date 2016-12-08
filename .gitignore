@@ -2,3 +2,4 @@ plugged
 _temp
 _backup
 autoload/plug.vim
+yankring_history_v2.txt
