@@ -2,6 +2,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'SirVer/ultisnips'
+Plug 'benmills/vimux'
 Plug 'chriseppstein/vim-haml'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'elixir-lang/vim-elixir'
@@ -9,6 +10,7 @@ Plug 'elmcast/elm-vim'
 Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
 Plug 'hynek/vim-python-pep8-indent'
+Plug 'janko-m/vim-test'
 Plug 'mileszs/ack.vim'
 Plug 'morhetz/gruvbox'
 Plug 'mustache/vim-mustache-handlebars'
@@ -16,7 +18,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree'
 Plug 'sjl/gundo.vim'
 Plug 'thinca/vim-visualstar'
-Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
@@ -286,8 +287,8 @@ nnoremap <silent> <S-right> <Esc>:bn<CR>
 nnoremap <Leader>a <Esc>:Ack<space>
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>u :GundoToggle<CR>
-nnoremap <leader>t :wa<CR>\|:call RunCurrentSpecFile()<CR>
-nnoremap <leader>T :wa<CR>\|:call RunNearestSpec()<CR>
+nnoremap <leader>t :wa<CR>\|:TestFile<CR>
+nnoremap <leader>T :wa<CR>\|:TestNearest<CR>
 " }}
 
 " Plugins configuration {{{
@@ -310,8 +311,9 @@ let g:UltiSnipsJumpForwardTrigger="<C-j>"
 let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 let g:airline_theme = 'badwolf'
 let g:airline_powerline_fonts = 1
-let g:rspec_command = "!t {spec}"
 let g:goldenview__enable_default_mapping = 0
 let g:ackhighlight = 1
 let g:ackprg = 'ag --nogroup --nocolor --column'
+let g:test#strategy = "vimux"
+let g:test#preserve_screen = 1
 " }}}
