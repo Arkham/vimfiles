@@ -251,6 +251,11 @@ function! ConvertShouldToExpect()
 endfunction
 nnoremap <Leader>cse :call ConvertShouldToExpect()<CR>
 
+" debug syntax highlighting
+map <leader>syn :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+      \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+      \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
 " convert assignment -> let rspec syntax
 nnoremap <Leader>cal :s/\v(\S+)\s*\=\s*(.+)/let(:\1) { \2 }/e<CR><C-O>
 
@@ -316,4 +321,5 @@ let g:ackhighlight = 1
 let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:test#strategy = "vimux"
 let g:test#preserve_screen = 1
+let g:elixir_use_markdown_for_docs = 1
 " }}}
