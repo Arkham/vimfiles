@@ -133,6 +133,12 @@ if has("autocmd")
     au BufNewFile,BufRead *.json setf javascript
   augroup END
 
+  " enable HTML snippets in Phoenix templates
+  augroup filetype_phoenix
+    au!
+    au FileType eelixir UltiSnipsAddFiletypes html.eelixir
+  augroup END
+
   " slim filetype
   augroup filetype_slim
     au!
