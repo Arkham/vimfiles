@@ -66,8 +66,9 @@ set scrolloff=3                   " provide some context when editing
 set hidden                        " Allow backgrounding buffers without writing them, and
                                   " remember marks/undo for backgrounded buffers
 " Mouse
-set mousehide                     " hide mouse when writing
 set mouse=a                       " we love the mouse
+set ttymouse=xterm2               " and we want it to be fast
+set mousehide                     " but hide it when we're writing
 
 " Whitespace
 set nowrap                        " don't wrap lines
