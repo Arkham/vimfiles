@@ -321,6 +321,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'badwolf'
 let g:elixir_use_markdown_for_docs = 1
+let g:elm_format_autosave = 1
 let g:goldenview__enable_default_mapping = 0
 let g:gundo_right = 1
 let g:html_indent_inctags = "html,body,head,tbody"
