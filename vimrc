@@ -5,6 +5,7 @@ Plug 'SirVer/ultisnips'
 Plug 'benmills/vimux'
 Plug 'chriseppstein/vim-haml'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'elixir-lang/vim-elixir'
 Plug 'elmcast/elm-vim'
 Plug 'ervandew/supertab'
@@ -32,7 +33,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/YankRing.vim'
-Plug 'wincent/Command-T'
 Plug 'zhaocai/GoldenView.Vim'
 
 call plug#end()
@@ -291,9 +291,9 @@ nnoremap <Leader>gr  :Gread<CR>
 nnoremap <Leader>gb  :Gblame<CR>
 
 " Plugins mapping
-nnoremap <Leader>f :CommandT<CR>
-nnoremap <Leader>F :CommandTFlush<CR>\|:CommandT<CR>
-nnoremap <Leader>. :CommandTTag<CR>
+nnoremap <Leader>f :CtrlP<CR>
+nnoremap <Leader>F :CtrlPClearCache<CR>\|:CtrlP<CR>
+nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <silent> <S-left> <Esc>:bp<CR>
 nnoremap <silent> <S-right> <Esc>:bn<CR>
 nnoremap <Leader>a <Esc>:Ack<space>
@@ -304,12 +304,7 @@ nnoremap <leader>T :wa<CR>\|:TestNearest<CR>
 " }}
 
 " Plugins configuration {{{
-let g:CommandTCancelMap = ['<Esc>', '<C-C>']
-let g:CommandTFileScanner = 'git'
-let g:CommandTMaxHeight = 20
-let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<Esc>OB']
-let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<Esc>OA']
-let g:CommandTTraverseSCM = 'pwd'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard']
 let g:NERDTreeHighlightCursorline = 0
 let g:NERDTreeMouseMode = 3
 let g:UltiSnipsEditSplit = "vertical"

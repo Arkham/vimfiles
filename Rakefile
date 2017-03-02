@@ -1,4 +1,4 @@
-task :default => [:plug, :tmp_dirs, :link, :vim, :command_t]
+task :default => [:plug, :tmp_dirs, :link, :vim]
 
 desc %(Setup plug)
 task :plug do
@@ -25,13 +25,6 @@ end
 desc %(Run Vim)
 task :vim do
   sh "vim"
-end
-
-desc %(Compile Command-T plugin)
-task :command_t => :macvim_check do
-  Dir.chdir "plugged/Command-T/ruby/command-t" do
-    sh "rake make"
-  end
 end
 
 desc %(Check if MacVim is installed)
