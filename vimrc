@@ -5,13 +5,14 @@ Plug 'SirVer/ultisnips'
 Plug 'benmills/vimux'
 Plug 'chriseppstein/vim-haml'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'elixir-lang/vim-elixir'
 Plug 'elmcast/elm-vim'
 Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'janko-m/vim-test'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'morhetz/gruvbox'
 Plug 'mustache/vim-mustache-handlebars'
@@ -291,10 +292,9 @@ nnoremap <Leader>gr  :Gread<CR>
 nnoremap <Leader>gb  :Gblame<CR>
 
 " Plugins mapping
-nnoremap <Leader>f :CtrlP<CR>
-nnoremap <Leader>F :CtrlPClearCache<CR>\|:CtrlP<CR>
-nnoremap <Leader>b :CtrlPBuffer<CR>
-nnoremap <Leader>m :CtrlPMRUFiles<CR>
+nnoremap <Leader>f :Files<CR>
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>m :History<CR>
 nnoremap <silent> <S-left> <Esc>:bp<CR>
 nnoremap <silent> <S-right> <Esc>:bn<CR>
 nnoremap <Leader>a <Esc>:Ack<space>
@@ -305,8 +305,6 @@ nnoremap <leader>T :wa<CR>\|:TestNearest<CR>
 " }}
 
 " Plugins configuration {{{
-let g:ctrlp_match_window = 'bottom,order:btt,min:5,max:5,results:5'
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard']
 let g:NERDTreeHighlightCursorline = 0
 let g:NERDTreeMouseMode = 3
 let g:UltiSnipsEditSplit = "vertical"
@@ -319,6 +317,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'badwolf'
 let g:elixir_use_markdown_for_docs = 1
 let g:elm_format_autosave = 1
+let g:fzf_layout = { 'down': '~30%' }
 let g:goldenview__enable_default_mapping = 0
 let g:gundo_right = 1
 let g:html_indent_inctags = "html,body,head,tbody"

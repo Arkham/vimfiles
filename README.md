@@ -32,7 +32,9 @@ This will install a "~/.vimrc" symlink to the config inside the ".vim" directory
   - pressing enter in normal mode resets search highlighting
   - %% is expanded to the current directory in command mode
   - `,e` edits a file in the same directory of the current
-  - `,f` opens file search via ctrlp plugin
+  - `,f` opens file search via fzf plugin
+  - `,b` opens buffer search via fzf plugin
+  - `,m` opens mru files search via fzf plugin
   - `,,` switches between two last buffers
   - `,cf` jumps to the first conflict marker
   - `,l` toggles list mode
