@@ -19,6 +19,7 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree'
 Plug 'sjl/gundo.vim'
+Plug 'slashmili/alchemist.vim'
 Plug 'thinca/vim-visualstar'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
@@ -241,32 +242,6 @@ nnoremap <Leader>kcm :KillControlM<CR>
 " compile c programs
 nnoremap <Leader>cc :w\|:!gcc % -Wall && ./a.out<CR>
 
-" convert ruby 1.8 -> 1.9 hash syntax
-noremap <Leader>crh :%s/:\(\w\+\)\s*=>/\1:/ge<CR><C-O>
-
-" convert should -> expect rspec syntax
-function! ConvertShouldToExpect()
-  let rspec_conversions = {
-        \ 'should': 'to',
-        \ 'should_not': 'not_to',
-        \ 'should_receive': 'to receive',
-        \ 'should_not_receive': 'not_to receive',
-        \ }
-
-  for [old, new] in items(rspec_conversions)
-    execute "normal! " . ':%s/\v^(\s+)(.+)\.' . old . '>/\1expect(\2).' . new . '/ge' . "\<CR>"
-  endfor
-endfunction
-nnoremap <Leader>cse :call ConvertShouldToExpect()<CR>
-
-" debug syntax highlighting
-map <leader>syn :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-      \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-      \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
-
-" convert assignment -> let rspec syntax
-nnoremap <Leader>cal :s/\v(\S+)\s*\=\s*(.+)/let(:\1) { \2 }/e<CR><C-O>
-
 " easy global search
 nnoremap <C-S> :Ack <C-R><C-W><CR>
 vnoremap <C-S> y<Esc>:Ack '<C-R>"'<CR>
@@ -317,6 +292,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'badwolf'
 let g:elixir_use_markdown_for_docs = 1
 let g:elm_format_autosave = 1
+let g:elm_format_fail_silently = 1
 let g:fzf_layout = { 'down': '~30%' }
 let g:goldenview__enable_default_mapping = 0
 let g:gundo_right = 1
