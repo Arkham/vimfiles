@@ -11,7 +11,7 @@ Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'janko-m/vim-test'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' }
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'morhetz/gruvbox'
