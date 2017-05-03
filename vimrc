@@ -1,7 +1,6 @@
 " Plugins {{{
 call plug#begin('~/.vim/plugged')
 
-Plug 'SirVer/ultisnips'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'elixir-lang/vim-elixir'
 Plug 'elmcast/elm-vim'
@@ -46,7 +45,7 @@ syntax enable                     " enable syntax highlighting...
 filetype plugin indent on         " depending on filetypes...
 runtime macros/matchit.vim        " with advanced matching capabilities
 set pastetoggle=<F12>             " for pasting code into Vim
-set timeout tm=1000 ttm=100       " fix slight delay after pressing Esc then O
+set timeout tm=1000 ttm=10        " fix slight delay after pressing Esc then O
 set autoread                      " auto load files if vim detects change
 set autowrite                     " auto write files when moving around
 set nobackup                      " disable backup files...
@@ -133,12 +132,6 @@ if has("autocmd")
   augroup filetype_json
     au!
     au BufNewFile,BufRead *.json setf javascript
-  augroup END
-
-  " enable HTML snippets in Phoenix templates
-  augroup filetype_phoenix
-    au!
-    au FileType eelixir UltiSnipsAddFiletypes html.eelixir
   augroup END
 
   " disable endwise for anonymous functions
@@ -282,10 +275,6 @@ nnoremap <leader>T :wa<CR>\|:TestNearest<CR>
 " Plugins configuration {{{
 let g:NERDTreeHighlightCursorline = 0
 let g:NERDTreeMouseMode = 3
-let g:UltiSnipsEditSplit = "vertical"
-let g:UltiSnipsExpandTrigger="<Tab>"
-let g:UltiSnipsJumpBackwardTrigger="<C-k>"
-let g:UltiSnipsJumpForwardTrigger="<C-j>"
 let g:ackhighlight = 1
 let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:airline_powerline_fonts = 1
