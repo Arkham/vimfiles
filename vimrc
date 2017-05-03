@@ -2,8 +2,6 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'SirVer/ultisnips'
-Plug 'benmills/vimux'
-Plug 'chriseppstein/vim-haml'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'elixir-lang/vim-elixir'
 Plug 'elmcast/elm-vim'
@@ -15,7 +13,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' }
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'morhetz/gruvbox'
-Plug 'mustache/vim-mustache-handlebars'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree'
 Plug 'sjl/gundo.vim'
@@ -69,7 +66,9 @@ set hidden                        " Allow backgrounding buffers without writing 
                                   " remember marks/undo for backgrounded buffers
 " Mouse
 set mouse=a                       " we love the mouse
-set ttymouse=xterm2               " and we want it to be fast
+if !has('nvim')
+  set ttymouse=xterm2             " and we want it to be fast
+endif
 set mousehide                     " but hide it when we're writing
 
 " Whitespace
@@ -142,10 +141,11 @@ if has("autocmd")
     au FileType eelixir UltiSnipsAddFiletypes html.eelixir
   augroup END
 
-  " slim filetype
-  augroup filetype_slim
+  " disable endwise for anonymous functions
+  augroup filetype_elixir_endwise
     au!
-    au BufNewFile,BufRead *.slim setf slim
+    au BufNewFile,BufRead *.{ex,exs}
+          \ let b:endwise_addition = '\=submatch(0)=="fn" ? "end)" : "end"'
   augroup END
 
   " make Python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
@@ -299,8 +299,10 @@ let g:gundo_right = 1
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
+let g:loaded_python3_provider = 1
 let g:ruby_indent_access_modifier_style = 'normal'
 let g:test#preserve_screen = 1
 let g:test#strategy = "vimux"
+let g:yankring_clipboard_monitor = 0
 let g:yankring_history_dir = '$HOME/.vim'
 " }}}
