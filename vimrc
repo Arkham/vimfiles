@@ -291,7 +291,7 @@ let g:html_indent_style1 = "inc"
 let g:loaded_python3_provider = 1
 let g:ruby_indent_access_modifier_style = 'normal'
 let g:test#preserve_screen = 1
-let g:test#strategy = "vimux"
+let g:test#strategy = "neovim"
 let g:yankring_clipboard_monitor = 0
 let g:yankring_history_dir = '$HOME/.vim'
 " }}}
