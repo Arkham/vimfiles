@@ -143,9 +143,15 @@ if has("autocmd")
   augroup END
 
   " make Python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
-  augroup filetype_django
+  augroup filetype_python
     au!
     au FileType python setl sts=4 ts=4 sw=4
+  augroup END
+
+  " follow Elm conventions
+  augroup filetype_elm
+    au!
+    au FileType elm setl sts=4 ts=4 sw=4
   augroup END
 
   " delete Fugitive buffers when they become inactive
