@@ -10,7 +10,6 @@ Plug 'hynek/vim-python-pep8-indent'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' }
 Plug 'junegunn/fzf.vim'
-Plug 'mileszs/ack.vim'
 Plug 'morhetz/gruvbox'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree'
@@ -282,8 +281,6 @@ nnoremap <leader>T :wa<CR>\|:TestNearest<CR>
 " Plugins configuration {{{
 let g:NERDTreeHighlightCursorline = 0
 let g:NERDTreeMouseMode = 3
-let g:ackhighlight = 1
-let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'badwolf'
 let g:elixir_use_markdown_for_docs = 1
