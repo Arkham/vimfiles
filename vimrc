@@ -243,8 +243,8 @@ nnoremap <Leader>kcm :KillControlM<CR>
 nnoremap <Leader>cc :w\|:!gcc % -Wall && ./a.out<CR>
 
 " easy global search
-nnoremap <C-S> :Ack <C-R><C-W><CR>
-vnoremap <C-S> y<Esc>:Ack '<C-R>"'<CR>
+nnoremap <C-S> :Ag <C-R><C-W><CR>
+vnoremap <C-S> y<Esc>:Ag '<C-R>"'<CR>
 
 " easier navigation between split windows
 nnoremap <C-J> <C-W>j
@@ -272,7 +272,7 @@ nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>m :History<CR>
 nnoremap <silent> <S-left> <Esc>:bp<CR>
 nnoremap <silent> <S-right> <Esc>:bn<CR>
-nnoremap <Leader>a <Esc>:Ack<space>
+nnoremap <Leader>a <Esc>:Ag<space>
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>u :GundoToggle<CR>
 nnoremap <leader>t :wa<CR>\|:TestFile<CR>
