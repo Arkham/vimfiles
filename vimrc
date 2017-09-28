@@ -245,7 +245,7 @@ nnoremap <Leader>cc :w\|:!gcc % -Wall && ./a.out<CR>
 
 " easy global search
 nnoremap <C-S> :Ag <C-R><C-W><CR>
-vnoremap <C-S> y<Esc>:Ag '<C-R>"'<CR>
+vnoremap <C-S> y<Esc>:Ag <C-R>"<CR>
 
 " easier navigation between split windows
 nnoremap <C-J> <C-W>j
@@ -301,3 +301,9 @@ let g:test#strategy = "vimux"
 let g:yankring_clipboard_monitor = 0
 let g:yankring_history_dir = '$HOME/.vim'
 " }}}
+
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>,
+  \                 <bang>0 ? fzf#vim#with_preview({ 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, 'up:60%')
+  \                         : fzf#vim#with_preview({ 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, 'right:50%:hidden', '?'),
+  \                 <bang>0)
