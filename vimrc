@@ -284,7 +284,7 @@ nnoremap <leader>T :wa<CR>\|:TestNearest<CR>
 " Plugins configuration {{{
 let g:NERDTreeHighlightCursorline = 0
 let g:NERDTreeMouseMode = 3
-let g:airline_powerline_fonts = 1
+let g:airline#extensions#branch#enabled = 0
 let g:airline_theme = 'badwolf'
 let g:elixir_use_markdown_for_docs = 1
 let g:elm_format_autosave = 1
