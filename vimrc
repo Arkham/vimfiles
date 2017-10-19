@@ -8,6 +8,7 @@ Plug 'elmcast/elm-vim'
 Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
 Plug 'hynek/vim-python-pep8-indent'
+Plug 'itchyny/lightline.vim'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' }
 Plug 'junegunn/fzf.vim'
@@ -30,8 +31,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'zhaocai/GoldenView.Vim'
@@ -284,11 +283,10 @@ nnoremap <leader>T :wa<CR>\|:TestNearest<CR>
 " Plugins configuration {{{
 let g:NERDTreeHighlightCursorline = 0
 let g:NERDTreeMouseMode = 3
-let g:airline#extensions#branch#enabled = 0
-let g:airline_theme = 'badwolf'
 let g:elixir_use_markdown_for_docs = 1
 let g:elm_format_autosave = 1
 let g:elm_format_fail_silently = 1
+let g:lightline = { 'mode_fallback': { 'terminal': 'normal' } }
 let g:fzf_layout = { 'down': '~30%' }
 let g:goldenview__enable_default_mapping = 0
 let g:gundo_right = 1
