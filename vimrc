@@ -198,8 +198,8 @@ endif
 let mapleader=','
 
 " open vimrc and reload it
-nnoremap <Leader>vv :vsplit $MYVIMRC<CR>
-nnoremap <Leader>sv :source $MYVIMRC<CR>
+nnoremap <Leader>vv :vsplit $HOME/.vimrc<CR>
+nnoremap <Leader>sv :source $HOME/.vimrc<CR>
 
 " disable man page for word under cursor
 nnoremap K <Nop>
