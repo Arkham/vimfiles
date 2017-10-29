@@ -16,7 +16,7 @@ Plug 'morhetz/gruvbox'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree'
-Plug 'sjl/gundo.vim'
+Plug 'simnalamburt/vim-mundo'
 Plug 'slashmili/alchemist.vim'
 Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'thinca/vim-visualstar'
@@ -275,7 +275,7 @@ nnoremap <silent> <S-left> <Esc>:bp<CR>
 nnoremap <silent> <S-right> <Esc>:bn<CR>
 nnoremap <Leader>a <Esc>:Ag<space>
 nnoremap <Leader>n :NERDTreeToggle<CR>
-nnoremap <Leader>u :GundoToggle<CR>
+nnoremap <Leader>u :MundoToggle<CR>
 nnoremap <leader>t :wa<CR>\|:TestFile<CR>
 nnoremap <leader>T :wa<CR>\|:TestNearest<CR>
 " }}
@@ -286,14 +286,14 @@ let g:NERDTreeMouseMode = 3
 let g:elixir_use_markdown_for_docs = 1
 let g:elm_format_autosave = 1
 let g:elm_format_fail_silently = 1
-let g:lightline = { 'mode_fallback': { 'terminal': 'normal' } }
 let g:fzf_layout = { 'down': '~30%' }
 let g:goldenview__enable_default_mapping = 0
-let g:gundo_right = 1
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
+let g:lightline = { 'mode_fallback': { 'terminal': 'normal' } }
 let g:loaded_python3_provider = 1
+let g:mundo_right = 1
 let g:ruby_indent_access_modifier_style = 'normal'
 let g:test#preserve_screen = 1
 let g:test#strategy = "vimux"
