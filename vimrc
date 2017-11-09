@@ -55,7 +55,7 @@ set noswapfile                    " and swap files
 
 " Style
 set background=dark
-color gruvbox
+silent! color gruvbox
 set number                        " line numbers are cool
 set relativenumber                " relative numbers are cooler
 set ruler                         " show the cursor position all the time
