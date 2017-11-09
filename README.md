@@ -4,6 +4,10 @@ Arkham's vim configuration
 My configuration uses [vim-plug](https://github.com/junegunn/vim-plug).
 (But you don't need to care about any of that.)
 
+## Preview
+
+![preview](./images/preview.png)
+
 ## Installation:
 
 Prerequisites: ruby, git.
