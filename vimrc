@@ -34,6 +34,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'zhaocai/GoldenView.Vim'
+Plug 'w0rp/ale'
 
 call plug#end()
 " }}}
@@ -283,6 +284,7 @@ nnoremap <leader>T :wa<CR>\|:TestNearest<CR>
 " Plugins configuration {{{
 let g:NERDTreeHighlightCursorline = 0
 let g:NERDTreeMouseMode = 3
+let g:ale_lint_on_text_changed = 'never'
 let g:elixir_use_markdown_for_docs = 1
 let g:elm_format_autosave = 1
 let g:elm_format_fail_silently = 1
