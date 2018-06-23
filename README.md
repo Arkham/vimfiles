@@ -23,28 +23,27 @@ This will install a "~/.vimrc" symlink to the config inside the ".vim" directory
 
 ## Features:
 
-* For vim:
-  - use vim-plug as plugin environment
-  - sane defaults: nocompatible mode, utf8, advanced syntax highlighting
-  - 2 spaces, no tabs, uses bash-alike autocompletion for files and directories
-  - tabs are displayed as `▸ `, end of lines as `¬`, trailing spaces as `.`
-  - incremental, case-insensitive search
-  - handful hard wrapping for text and markdown
-  - follow style conventions for ruby, python and makefiles
-  - reopen files in the same spot where you closed them
-  - 'Leader' character mapped to "," (comma)
-  - pressing enter in normal mode resets search highlighting
-  - %% is expanded to the current directory in command mode
-  - `,e` edits a file in the same directory of the current
-  - `,f` opens file search via fzf plugin
-  - `,b` opens buffer search via fzf plugin
-  - `,m` opens mru files search via fzf plugin
-  - `,,` switches between two last buffers
-  - `,cf` jumps to the first conflict marker
-  - `,l` toggles list mode
-  - `,p` copies the path of the current file
-  - `,kw` or `:KillWhitespace` removes all trailing spaces
-  - `<C-j/k/h/l>` switches between windows (no need to prepend `<C-w>`)
-  - cursor keys for movement disabled!
-  - nice looking status line
-  - awesome configurations for Ag, Nerdtree and more..
+- Use vim-plug as plugin environment
+- Sane defaults: nocompatible mode, utf8, advanced syntax highlighting
+- 2 spaces, no tabs, uses bash-alike autocompletion for files and directories
+- Tabs are displayed as `▸ `, end of lines as `¬`, trailing spaces as `.`
+- Incremental, case-insensitive search
+- Handful hard wrapping for text and markdown
+- Follow style conventions for ruby, python and makefiles
+- Reopen files in the same spot where you closed them
+- 'Leader' character mapped to "," (comma)
+- Pressing enter in normal mode resets search highlighting
+- %% is expanded to the current directory in command mode
+- `,e` edits a file in the same directory of the current
+- `,f` opens file search via fzf plugin
+- `,b` opens buffer search via fzf plugin
+- `,m` opens mru files search via fzf plugin
+- `,,` switches between two last buffers
+- `,cf` jumps to the first conflict marker
+- `,l` toggles list mode
+- `,p` copies the path of the current file
+- `,kw` or `:KillWhitespace` removes all trailing spaces
+- `<C-j/k/h/l>` switches between windows (no need to prepend `<C-w>`)
+- Cursor keys for movement disabled!
+- Nice looking status line
+- Awesome configurations for Ag, Nerdtree and more..
