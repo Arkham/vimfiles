@@ -275,6 +275,7 @@ nnoremap <Leader>gr  :Gread<CR>
 nnoremap <Leader>gb  :Gblame<CR>
 
 " Plugins mapping
+nnoremap <Leader>w :ALEDetail<CR>
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>m :History<CR>
@@ -283,8 +284,8 @@ nnoremap <silent> <S-right> <Esc>:bn<CR>
 nnoremap <Leader>a <Esc>:Ag<space>
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>u :MundoToggle<CR>
-nnoremap <leader>t :wa<CR>\|:TestFile<CR>
-nnoremap <leader>T :wa<CR>\|:TestNearest<CR>
+nnoremap <Leader>t :wa<CR>\|:TestFile<CR>
+nnoremap <Leader>T :wa<CR>\|:TestNearest<CR>
 " }}
 
 " Plugins configuration {{{
