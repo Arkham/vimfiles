@@ -1,6 +1,8 @@
 " Plugins {{{
 call plug#begin('~/.vim/plugged')
 
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'SirVer/ultisnips'
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'elixir-lang/vim-elixir'
@@ -33,8 +35,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/YankRing.vim'
-Plug 'zhaocai/GoldenView.Vim'
 Plug 'w0rp/ale'
+Plug 'zhaocai/GoldenView.Vim'
 
 call plug#end()
 " }}}
@@ -250,6 +252,9 @@ nnoremap <Leader>kcm :KillControlM<CR>
 " compile c programs
 nnoremap <Leader>cc :w\|:!gcc % -Wall && ./a.out<CR>
 
+" compile example elm program
+nnoremap <silent> <Leader>ce :w\|:!elm-make Main.elm --output app.js<CR>
+
 " easy global search
 nnoremap <C-S> :Ag <C-R><C-W><CR>
 vnoremap <C-S> y<Esc>:Ag <C-R>"<CR>
@@ -308,6 +313,7 @@ let g:test#preserve_screen = 1
 let g:test#strategy = "vimux"
 let g:yankring_clipboard_monitor = 0
 let g:yankring_history_dir = '$HOME/.vim'
+let g:UltiSnipsSnippetsDir = '$HOME/.vim/UltiSnips'
 " }}}
 
 command! -bang -nargs=* Ag
