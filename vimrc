@@ -281,6 +281,7 @@ nnoremap <Leader>gb  :Gblame<CR>
 
 " Plugins mapping
 nnoremap <Leader>w :ALEDetail<CR>
+nnoremap <Leader>x :ALENextWrap<CR>
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>m :History<CR>
@@ -294,6 +295,8 @@ nnoremap <Leader>T :wa<CR>\|:TestNearest<CR>
 " }}
 
 " Plugins configuration {{{
+hi ALEError guibg=124 ctermbg=124 gui=NONE cterm=NONE
+
 let g:NERDTreeHighlightCursorline = 0
 let g:NERDTreeMouseMode = 3
 let g:ale_lint_on_text_changed = 'never'
