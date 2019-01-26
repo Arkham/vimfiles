@@ -1,12 +1,12 @@
 " Plugins {{{
 call plug#begin('~/.vim/plugged')
 
+Plug 'ElmCast/elm-vim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'SirVer/ultisnips'
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'elixir-lang/vim-elixir'
-Plug 'elmcast/elm-vim'
 Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
 Plug 'hynek/vim-python-pep8-indent'
@@ -66,7 +66,7 @@ set nocursorline                  " disable cursor line
 set showcmd                       " display incomplete commands
 set novisualbell                  " no flashes please
 set scrolloff=3                   " provide some context when editing
-set hidden                        " Allow backgrounding buffers without writing them, and
+set hidden                        " allow backgrounding buffers without writing them, and
                                   " remember marks/undo for backgrounded buffers
 " Mouse
 set mouse=a                       " we love the mouse
@@ -76,7 +76,7 @@ endif
 set mousehide                     " but hide it when we're writing
 
 " Whitespace
-set nowrap                        " don't wrap lines
+set wrap                          " wrap long lines
 set tabstop=2                     " a tab is two spaces
 set shiftwidth=2                  " an autoindent (with <<) is two spaces
 set softtabstop=2                 " when deleting, treat spaces as tabs
@@ -113,8 +113,8 @@ set splitright                    " create new horizontal split on the right
 set splitbelow                    " create new vertical split below the current window
 
 " Backup and status line
-set backupdir=~/.vim/_backup    " where to put backup files.
-set directory=~/.vim/_temp      " where to put swap files.
+set backupdir=~/.vim/_backup      " where to put backup files.
+set directory=~/.vim/_temp        " where to put swap files.
 set laststatus=2
 " }}}
 
@@ -156,6 +156,13 @@ if has("autocmd")
   augroup filetype_elm
     au!
     au FileType elm setl sts=4 ts=4 sw=4
+  augroup END
+
+  augroup filetype_elm_test
+    au!
+    au BufNewFile,BufRead */tests/**/*.elm
+          \ let b:ale_elm_make_executable = 'elm-test'
+          \ | let b:ale_elm_make_use_global = 1
   augroup END
 
   " delete Fugitive buffers when they become inactive
@@ -300,6 +307,7 @@ hi ALEError guibg=124 ctermbg=124 gui=NONE cterm=NONE
 let g:NERDTreeHighlightCursorline = 0
 let g:NERDTreeMouseMode = 3
 let g:ale_lint_on_text_changed = 'never'
+let g:ale_linters = { 'haskell': ['hlint', 'hdevtools'] }
 let g:elixir_use_markdown_for_docs = 1
 let g:elm_format_autosave = 1
 let g:elm_format_fail_silently = 1
@@ -309,10 +317,11 @@ let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 let g:lightline = { 'mode_fallback': { 'terminal': 'normal' } }
-let g:loaded_python3_provider = 1
+let g:loaded_python_provider = 1
 let g:mundo_right = 1
 let g:ruby_indent_access_modifier_style = 'normal'
 let g:test#preserve_screen = 1
+let test#ruby#rspec#executable = "spring rspec"
 let g:test#strategy = "vimux"
 let g:yankring_clipboard_monitor = 0
 let g:yankring_history_dir = '$HOME/.vim'
