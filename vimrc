@@ -1,6 +1,7 @@
 " Plugins {{{
 call plug#begin('~/.vim/plugged')
 
+Plug 'Arkham/nvim-miniyank'
 Plug 'ElmCast/elm-vim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'SirVer/ultisnips'
@@ -34,7 +35,6 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-ruby/vim-ruby'
-Plug 'vim-scripts/YankRing.vim'
 Plug 'w0rp/ale'
 Plug 'zhaocai/GoldenView.Vim'
 
@@ -299,6 +299,10 @@ nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>u :MundoToggle<CR>
 nnoremap <Leader>t :wa<CR>\|:TestFile<CR>
 nnoremap <Leader>T :wa<CR>\|:TestNearest<CR>
+map p <Plug>(miniyank-autoput)
+map P <Plug>(miniyank-autoPut)
+map <C-P> <Plug>(miniyank-cycle)
+map <C-N> <Plug>(miniyank-cycleback)
 " }}
 
 " Plugins configuration {{{
@@ -323,9 +327,8 @@ let g:ruby_indent_access_modifier_style = 'normal'
 let g:test#preserve_screen = 1
 let test#ruby#rspec#executable = "spring rspec"
 let g:test#strategy = "vimux"
-let g:yankring_clipboard_monitor = 0
-let g:yankring_history_dir = '$HOME/.vim'
-let g:UltiSnipsSnippetsDir = '$HOME/.vim/UltiSnips'
+let g:miniyank_filename = $HOME."/.vim/.miniyank.mpack"
+let g:UltiSnipsSnippetsDir = $HOME."/.vim/UltiSnips"
 " }}}
 
 command! -bang -nargs=* Ag
