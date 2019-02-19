@@ -159,13 +159,6 @@ if has("autocmd")
     au FileType elm setl sts=4 ts=4 sw=4
   augroup END
 
-  augroup filetype_elm_test
-    au!
-    au BufNewFile,BufRead */tests/**/*.elm
-          \ let b:ale_elm_make_executable = 'elm-test'
-          \ | let b:ale_elm_make_use_global = 1
-  augroup END
-
   " delete Fugitive buffers when they become inactive
   augroup filetype_fugitive
     au!
@@ -261,7 +254,7 @@ nnoremap <Leader>kcm :KillControlM<CR>
 nnoremap <Leader>cc :w\|:!gcc % -Wall && ./a.out<CR>
 
 " compile example elm program
-nnoremap <silent> <Leader>ce :w\|:!elm-make Main.elm --output app.js<CR>
+nnoremap <silent> <Leader>ce :w\|:!elm make Main.elm --output app.js<CR>
 
 " easy global search
 nnoremap <C-S> :Ag <C-R><C-W><CR>
