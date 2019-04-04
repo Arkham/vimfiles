@@ -2,24 +2,21 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'Arkham/nvim-miniyank'
-Plug 'ElmCast/elm-vim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'SirVer/ultisnips'
-Plug 'alx741/vim-hindent'
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'elixir-lang/vim-elixir'
 Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
-Plug 'hynek/vim-python-pep8-indent'
 Plug 'itchyny/lightline.vim'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' }
 Plug 'junegunn/fzf.vim'
 Plug 'morhetz/gruvbox'
 Plug 'neovimhaskell/haskell-vim'
-Plug 'pangloss/vim-javascript'
+Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdtree'
+Plug 'sheerun/vim-polyglot'
 Plug 'simnalamburt/vim-mundo'
 Plug 'slashmili/alchemist.vim'
 Plug 'stefandtw/quickfix-reflector.vim'
@@ -29,13 +26,11 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'vim-ruby/vim-ruby'
 Plug 'w0rp/ale'
 Plug 'zhaocai/GoldenView.Vim'
 
@@ -190,6 +185,12 @@ if has("autocmd")
     autocmd TermOpen * setlocal nonumber norelativenumber
   augroup END
 
+  " Run all formatters
+  augroup fmt
+    autocmd!
+    autocmd BufWritePre * Neoformat
+  augroup END
+
   " remember last location in file, but not for commit messages,
   " or when the position is invalid or inside an event handler,
   " or when the mark is in the first line, that is the default
@@ -213,11 +214,6 @@ nnoremap <Leader>sv :source $HOME/.vimrc<CR>
 
 " disable man page for word under cursor
 nnoremap K <Nop>
-
-" Y u no consistent?
-function! YRRunAfterMaps()
-  nnoremap <silent> Y :<C-U>YRYankCount 'y$'<CR>
-endfunction
 
 " clear the search buffer when hitting return
 nnoremap <CR> :nohlsearch<CR>
@@ -304,25 +300,18 @@ hi ALEError guibg=124 ctermbg=124 gui=NONE cterm=NONE
 
 let g:NERDTreeHighlightCursorline = 0
 let g:NERDTreeMouseMode = 3
+let g:UltiSnipsSnippetsDir = $HOME."/.vim/UltiSnips"
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_linters = { 'haskell': ['hlint', 'hdevtools'] }
-let g:elixir_use_markdown_for_docs = 1
-let g:elm_format_autosave = 1
-let g:elm_format_fail_silently = 1
 let g:fzf_layout = { 'down': '~30%' }
 let g:goldenview__enable_default_mapping = 0
-let g:html_indent_inctags = "html,body,head,tbody"
-let g:html_indent_script1 = "inc"
-let g:html_indent_style1 = "inc"
 let g:lightline = { 'mode_fallback': { 'terminal': 'normal' } }
 let g:loaded_python_provider = 1
-let g:mundo_right = 1
-let g:ruby_indent_access_modifier_style = 'normal'
-let g:test#preserve_screen = 1
-let test#ruby#rspec#executable = "spring rspec"
-let g:test#strategy = "vimux"
 let g:miniyank_filename = $HOME."/.vim/.miniyank.mpack"
-let g:UltiSnipsSnippetsDir = $HOME."/.vim/UltiSnips"
+let g:mundo_right = 1
+let g:test#preserve_screen = 1
+let g:test#ruby#rspec#executable = "spring rspec"
+let g:test#strategy = "vimux"
 " }}}
 
 command! -bang -nargs=* Ag
