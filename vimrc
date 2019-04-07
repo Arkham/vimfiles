@@ -301,8 +301,9 @@ hi ALEError guibg=124 ctermbg=124 gui=NONE cterm=NONE
 let g:NERDTreeHighlightCursorline = 0
 let g:NERDTreeMouseMode = 3
 let g:UltiSnipsSnippetsDir = $HOME."/.vim/UltiSnips"
+let g:ale_elixir_elixir_ls_release = $HOME."/code/elixir-ls/rel"
 let g:ale_lint_on_text_changed = 'never'
-let g:ale_linters = { 'haskell': ['hlint', 'hdevtools'] }
+let g:ale_linters = { 'haskell': ['hlint', 'hdevtools'], 'elixir': ['elixir-ls'] }
 let g:fzf_layout = { 'down': '~30%' }
 let g:goldenview__enable_default_mapping = 0
 let g:haskell_indent_after_bare_where = 2
