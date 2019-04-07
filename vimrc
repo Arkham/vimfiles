@@ -125,7 +125,7 @@ if has("autocmd")
   " make sure all markdown files have the correct filetype set and setup wrapping
   augroup filetype_markdown
     au!
-    au FileType markdown setl tw=80
+    au FileType markdown setl tw=75
     au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown
   augroup END
 
