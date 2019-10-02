@@ -2,7 +2,6 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'Arkham/nvim-miniyank'
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'SirVer/ultisnips'
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
@@ -56,7 +55,6 @@ set noswapfile                    " and swap files
 set background=dark
 silent! color gruvbox
 set number                        " line numbers are cool
-set relativenumber                " relative numbers are cooler
 set ruler                         " show the cursor position all the time
 set nocursorline                  " disable cursor line
 set showcmd                       " display incomplete commands
@@ -302,6 +300,7 @@ let g:NERDTreeHighlightCursorline = 0
 let g:NERDTreeMouseMode = 3
 let g:UltiSnipsSnippetsDir = $HOME."/.vim/UltiSnips"
 let g:ale_elixir_elixir_ls_release = $HOME."/code/elixir-ls/rel"
+let g:ale_lint_on_insert_leave = 0
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_linters = { 'haskell': ['hlint', 'hdevtools'], 'elixir': ['elixir-ls'] }
 let g:fzf_layout = { 'down': '~30%' }
@@ -319,8 +318,11 @@ let g:lightline = { 'mode_fallback': { 'terminal': 'normal' } }
 let g:loaded_python_provider = 1
 let g:miniyank_filename = $HOME."/.vim/.miniyank.mpack"
 let g:mundo_right = 1
+let g:neoformat_enabled_json = []
 let g:neoformat_enabled_ruby = []
 let g:neoformat_only_msg_on_error = 1
+let g:polyglot_disabled = ['json']
+let g:python3_host_prog = '/usr/local/bin/python3'
 let g:test#preserve_screen = 1
 let g:test#ruby#rspec#executable = "spring rspec"
 let g:test#strategy = "vimux"
