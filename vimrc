@@ -178,10 +178,12 @@ if has("autocmd")
   augroup END
 
   " disable numbers in terminal windows
-  augroup terminal_numbers
-    au!
-    autocmd TermOpen * setlocal nonumber norelativenumber
-  augroup END
+  if has('nvim')
+    augroup terminal_numbers
+      au!
+      autocmd TermOpen * setlocal nonumber
+    augroup END
+  endif
 
   " Run all formatters
   augroup fmt
