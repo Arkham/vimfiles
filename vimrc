@@ -123,7 +123,7 @@ if has("autocmd")
   " make sure all markdown files have the correct filetype set and setup wrapping
   augroup filetype_markdown
     au!
-    au FileType markdown setl tw=75
+    au FileType markdown setl tw=75 | syntax sync fromstart
     au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown
   augroup END
 
@@ -316,6 +316,7 @@ let g:haskell_indent_if = 3
 let g:haskell_indent_in = 1
 let g:haskell_indent_let = 4
 let g:haskell_indent_where = 6
+let g:hdevtools_stack = 1
 let g:lightline = { 'mode_fallback': { 'terminal': 'normal' } }
 let g:loaded_python_provider = 1
 let g:miniyank_filename = $HOME."/.vim/.miniyank.mpack"
@@ -335,3 +336,10 @@ command! -bang -nargs=* Ag
   \                 <bang>0 ? fzf#vim#with_preview({ 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, 'up:60%')
   \                         : fzf#vim#with_preview({ 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, 'right:50%:hidden', '?'),
   \                 <bang>0)
+
+" bindings for fuzzy-finding
+nnoremap <silent> <C-e> :call fzf#run(fzf#wrap({
+  \ "source": "git ls-files --others --cached --exclude-standard \| similar-sort " . @%,
+  \ "sink": "edit",
+  \ "options": "--tiebreak index"
+  \ }))<CR>
